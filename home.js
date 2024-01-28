@@ -69,6 +69,12 @@ async function profileDetails() {
         var email = data[0]['email']
 
         var summary = document.getElementById('summary')
+        var emaill = document.getElementById('email')
+        var git = document.getElementById('git')
+        var ln = document.getElementById('ln')
         summary.innerHTML = about_me
+        emaill.innerHTML = email
+        ln.href = linkedln
+        git.href = github
     }
 }
