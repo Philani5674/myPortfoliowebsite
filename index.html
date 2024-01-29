@@ -20,7 +20,7 @@
             </li>
 
             <li class="login">
-                <a href="/admin.html">Admin</a>
+                <a href="/Portfolio/login.html">Admin</a>
             </li>
         </ul>
     </nav>
@@ -62,7 +62,10 @@
 
 
     <section id="summary ">
-        <h2>Summary</h2>
+        <div style="text-align: center;">
+            <h2>Summary</h2>
+        </div>
+
         <p id="summary">
         </p>
     </section>
@@ -70,15 +73,57 @@
         <div style="text-align: center;">
             <h2>Education</h2>
         </div>
+        <div id="doclist" style=" display: flex;">
 
-        <p><strong>University XYZ</strong> - Bachelor's in Computer Science</p>
+        </div>
     </section>
     <section>
-        <h2>Skills</h2>
+        <div style="text-align: center;">
+            <h2>Skills</h2>
+        </div>
         <div id="skills">
 
         </div>
     </section>
+    <section>
+
+        <div style="text-align: center;">
+            <h2>Hobbies</h2>
+        </div>
+        <div id="hobbies" class="gallery">
+            <div class="gallery-item">
+                <img src="assets/garden.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/photo-1602968407815-5963b28c66af.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/photo-1585424249632-f4d52f602ca7.jpg" alt="">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+    <div class="contain">
+        <div style="text-align: center;">
+            <h2>Contact</h2>
+        </div>
+
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="mail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button id="submit-message" type="submit">Submit</button>
+        </form>
+    </div>
     <section id="invisible">
 
     </section>

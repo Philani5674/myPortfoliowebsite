@@ -4,25 +4,50 @@ const supabaseUrl = 'https://hvlatkavzuxhjvnztxqq.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2bGF0a2F2enV4aGp2bnp0eHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU4NjU0MTUsImV4cCI6MjAyMTQ0MTQxNX0.6l4QactgubeHqEL3c6MwMs2EC0cNSzSkbXhwLiucne8'; // Replace with your Supabase key
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-function signIn(email, password) {
-    try {
-        const { user, error } = supabase.auth.signInWithPassword({
-            email,
-            password,
-        });
+document.addEventListener('DOMContentLoaded', function() {
+
+    const submitButton = document.getElementById('submit-message');
+
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var name = document.getElementById('name').value
+        var email = document.getElementById('email').value
+        var message = document.getElementById('message').value
+        saveMessage(email, name, message)
 
 
-    } catch (error) {}
-}
 
-signIn('philaningcamu18@gmail.com', 'philaningcamu18@gmail.com')
+
+    });
+});
+
 getAllData()
 
+async function saveMessage(ema, fullname, mess) {
 
+    const { data, error } = await supabase
+        .from('messege')
+        .insert([{
+            email: ema,
+            full_name: fullname,
+            message: mess
+        }, ])
+        .select()
+    if (error) {
+        alert('Request not sent')
+        console.log(error)
+
+    } else {
+        alert('Request Sent')
+    }
+
+}
 
 function getAllData() {
     getSkills()
     profileDetails()
+    getEducation()
 }
 
 async function getSkills() {
@@ -76,5 +101,28 @@ async function profileDetails() {
         emaill.innerHTML = email
         ln.href = linkedln
         git.href = github
+    }
+}
+
+async function getEducation() {
+    let { data, error } = await supabase
+        .from('education')
+        .select('institution,degree,start_date,end_date')
+    if (!error) {
+        var educationList = document.getElementById('doclist')
+
+        data.forEach(education => {
+            const educationItem = document.createElement('div');
+            const startDate = new Date(education.start_date).getFullYear();
+            const endDate = new Date(education.end_date).getFullYear();
+            educationItem.classList.add('education-item');
+            educationItem.innerHTML = `
+                <h3>${education.institution}</h3>
+                <p>${education.degree}</p>
+                <p>${startDate}- ${endDate}</p>
+            `;
+            educationList.appendChild(educationItem);
+        });
+
     }
 }
