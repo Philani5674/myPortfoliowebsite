@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
 
         var name = document.getElementById('name').value
-        var email = document.getElementById('email').value
+        var email = document.getElementById('mail').value
         var message = document.getElementById('message').value
         saveMessage(email, name, message)
 
