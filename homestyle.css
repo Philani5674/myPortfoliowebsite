@@ -179,10 +179,9 @@ footer {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    width: fit-content;
+    width: 100%;
     border-top: green solid 0.2cm;
     margin-right: 10px;
-    min-width: 200px;
 }
 
 .contain {
