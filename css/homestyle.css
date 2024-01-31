@@ -161,13 +161,14 @@ li button:hover {
 }
 
 footer {
-    position: sticky;
-    max-width: 100%;
+    position: fixed;
+    width: 100%;
     margin: 0 auto;
     padding: 30px;
     background-color: #333;
     color: #fff;
     text-align: center;
+    margin-top: 20px;
     padding: 10px;
     bottom: 0;
 }
@@ -198,6 +199,7 @@ footer {
     margin: 0 auto;
     border-top: 0.2cm solid#3498db;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .form-group {
