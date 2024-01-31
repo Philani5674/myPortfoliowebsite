@@ -43,11 +43,21 @@ section {
     padding: 20px;
 }
 
+.email {
+    background-color: blue;
+    border-radius: 40%;
+    width: fit-content;
+}
+
+strong {
+    padding: 0;
+}
+
 header {
-    max-width: auto;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-image: url('assets/360_F_343250968_iOiPEWxdWXd2UWMumSboTSHzwR7Q4Zpd.jpg');
+    background-image: url('../assets/360_F_343250968_iOiPEWxdWXd2UWMumSboTSHzwR7Q4Zpd.jpg');
     text-align: center;
     color: #111111;
     height: 100px;
