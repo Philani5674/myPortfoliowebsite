@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 
     async function displayMessages() {
-        const messages = await server.fetchMessages();
+        const messages = await server.fetchMessages()
         const tbody = messagesTable.querySelector('tbody');
         tbody.innerHTML = '';
         messages.forEach(message => {
