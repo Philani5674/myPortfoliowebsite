@@ -155,3 +155,22 @@ export async function updateSkills() {}
 export async function viewMesseges() {
 
 }
+
+export async function fetchSkills() {
+    const { data, error } = await supabase.from('skill').select('*');
+    if (error) {
+
+        return [];
+    }
+    console.log(data)
+    return data;
+}
+
+export async function fetchMessages() {
+    const { data, error } = await supabase.from('messege').select('*');
+    if (error) {
+        return [];
+    }
+    console.log(data)
+    return data;
+}
