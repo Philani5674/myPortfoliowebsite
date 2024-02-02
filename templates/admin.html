@@ -9,16 +9,13 @@
 <body>
     <h1>Admin Panel</h1>
 
-    <div class="message-container">
-        <div class="message-col">
-            <strong>From:</strong> John Doe &lt;example1@example.com&gt;<br>
-            <strong>Message:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
+    <div class="message-container" id="message-container">
         
     </div>
 
-   
-
-
+    <script type="module" >import * as server from '../js/supabase.js'
+        server.fetchMessagesALL();
+       </script>
 </body>
 </html>
+

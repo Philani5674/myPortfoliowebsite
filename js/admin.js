@@ -1,2 +1,3 @@
 import * as server from './supabase.js'
-server.fetchMessages();
+server.fetchMessagesALL();
+console.log("here")
