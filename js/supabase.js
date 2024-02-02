@@ -174,3 +174,27 @@ export async function fetchMessages() {
     console.log(data)
     return data;
 }
+
+
+export async function fetchMessagesALL() {
+    const { data, error } = await supabase
+        .from('messege')
+        .select('full_name, email,message');
+
+    if (error) {
+        console.error('Error fetching messages:', error.message);
+        return;
+    }
+
+    // Generate message columns
+    const messageContainer = document.getElementById('message-container');
+    data.forEach(message => {
+        const messageCol = document.createElement('div');
+        messageCol.classList.add('message-col');
+        messageCol.innerHTML = `
+            <strong>From:</strong> ${message.full_name} ${message.email}<br>
+            <strong>Message:</strong> ${message.message}
+        `;
+        messageContainer.appendChild(messageCol);
+    });
+}

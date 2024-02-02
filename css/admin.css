@@ -1,102 +1,19 @@
-.form-group input {
-    display: flex;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: grey solid 1px;
-    border-radius: 0.5cm;
-    box-shadow: inset;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    padding: 10px;
-}
-
-li:hover {
-    background-color: #e0e0e0;
-}
-
-#edit-skill-form,
-#new-skill-form {
-    margin-top: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
+.message-container {
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-
-/* Add styles for messages list */
-
-#messages-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.message-item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-}
-
-.message-item strong {
     display: block;
-    margin-bottom: 5px;
-    color: #333;
+    border-radius: 0.2cm;
+    margin: 50px;
 }
 
-.message-item span {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.8em;
-    color: #666;
+
+.message-col {
+    flex: 1 1 30%; 
+    margin: 5px; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0.2cm;
 }
 
-.message-item p {
-    margin: 0;
-}
 
-.message-item small {
-    color: #999;
-    font-size: 0.8em;
-}

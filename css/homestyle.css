@@ -75,9 +75,10 @@ p {
 
 section {
     margin-top: 20px;
-    border-top: 0.2cm solid#3498db;
+    border: solid 0.1rem grey;
     background-color: white;
     padding-top: 0%;
+    border-radius: 0.5cm;
 }
 
 #contact {
@@ -122,6 +123,7 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 li {
@@ -197,9 +199,11 @@ footer {
 .contain {
     max-width: 800px;
     margin: 0 auto;
-    border-top: 0.2cm solid#3498db;
+    border: solid 0.1rem grey;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 0.5cm;
 }
 
 .form-group {
